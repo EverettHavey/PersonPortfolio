@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Carter | Professional Resume</title>
+    <style>
+        :root {
+            --bg-dark: #0a0a0c;
+            --paper-bg: #111114;
+            --accent-red: #ff3344;
+            --accent-teal: #00f5d4;
+            --text-main: #e6e8ee;
+            --text-dim: #94949e;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.5;
+        }
+
+        /* Resume "Paper" Container */
+        .resume-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--paper-bg);
+            border: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            background: rgba(255, 255, 255, 0.02);
+            border-right: 1px solid var(--border);
+            padding: 40px 30px;
+        }
+
+        .resume-img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-bottom: 25px;
+            filter: grayscale(20%);
+            border: 1px solid var(--border);
+        }
+
+        .side-section { margin-bottom: 35px; }
+        .side-title { 
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            color: var(--accent-teal); 
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .info-link { color: var(--text-dim); text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 8px; }
+        .info-link:hover { color: var(--text-main); }
+
+        .skill-list { list-style: none; padding: 0; font-size: 0.85rem; color: var(--text-dim); }
+        .skill-list li { margin-bottom: 6px; display: flex; justify-content: space-between; }
+
+        /* Main Body Styling */
+        .main-content { padding: 40px 50px; }
+        
+        header h1 { font-size: 2.8rem; margin: 0; letter-spacing: -1px; }
+        .tagline { color: var(--accent-red); font-weight: 600; font-size: 1.1rem; margin-top: 5px; }
+
+        .summary { margin: 30px 0; color: var(--text-dim); font-size: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 30px; }
+
+        .section-header { 
+            font-size: 1.2rem; 
+            font-weight: 700; 
+            margin: 40px 0 20px; 
+            display: flex; 
+            align-items: center;
+        }
+        .section-header::after { content: ""; height: 1px; flex-grow: 1; background: var(--border); margin-left: 20px; }
+
+        .job { margin-bottom: 35px; }
+        .job-meta { display: flex; justify-content: space-between; align-items: baseline; }
+        .job-title { font-size: 1.2rem; font-weight: 700; color: var(--text-main); }
+        .job-company { color: var(--accent-teal); font-weight: 600; margin-bottom: 10px; }
+        .job-date { font-family: monospace; font-size: 0.9rem; color: var(--text-dim); }
+        
+        .job-bullets { padding-left: 18px; color: var(--text-dim); font-size: 0.95rem; }
+        .job-bullets li { margin-bottom: 8px; }
+
+        .back-nav {
+            max-width: 900px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .back-nav a { color: var(--accent-teal); text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .resume-wrapper { grid-template-columns: 1fr; }
+            .sidebar { border-right: none; border-bottom: 1px solid var(--border); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="back-nav">
+        <a href="index.html">← BACK TO HOMEPAGE</a>
+    </nav>
+
+    <div class="resume-wrapper">
+        <aside class="sidebar">
+            <img src="images/Daniel.webp" alt="Daniel Carter" class="resume-img">
+            
+            <div class="side-section">
+                <h3 class="side-title">Contact</h3>
+                <a href="mailto:d.carter@example.com" class="info-link">danielcarter@outlook.com</a>
+                <a href="https://en.wikipedia.org/wiki/San_Mateo,_California" class="info-link">San Mateo, CA</a>
+                <a href="https://www.roblox.com/users/529017389/profile" class="info-link">My Roblox Profile</a>
+            </div>
+
+            <div class="side-section">
+                <h3 class="side-title">Core Expertise</h3>
+                <ul class="skill-list">
+                    <li>Product Leadership <span>95%</span></li>
+                    <li>Identity Verification <span>100%</span></li>
+                    <li>Cybersecurity Compliance <span>90%</span></li>
+                    <li>Strategic Roadmapping <span>85%</span></li>
+                </ul>
+            </div>
+
+            <div class="side-section">
+                <h3 class="side-title">Technical</h3>
+                <ul class="skill-list" style="color: var(--text-main)">
+                    <li>Biometric Auth</li>
+                    <li>LUA / Python</li>
+                    <li>Identity Mesh</li>
+                    <li>Behavioral Analytics</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Daniel Carter</h1>
+                <div class="tagline">Lead Product Manager @ Roblox</div>
+            </header>
+
+            <div class="summary">
+                Mission-driven Product Lead with over 7 years of experience in trust, safety, and digital identity. Joined Roblox in 2025 to architect high-scale verification ecosystems that protect millions of users in the metaverse.
+            </div>
+
+            <div class="section-header">Professional Experience</div>
+
+            <div class="job">
+                <div class="job-meta">
+                    <div class="job-title">Lead Project Manager</div>
+                    <div class="job-date">Nov 2025 — Present</div>
+                </div>
+                <div class="job-company">Roblox</div>
+                <ul class="job-bullets">
+                    <li>Currently leading the **2026 Age Verification framework** rollout, integrating native biometric and document-mesh technologies.</li>
+                    <li>Directing a cross-functional team of engineers, legal counsel, and UX designers to meet global platform safety standards.</li>
+                    <li>Implementing privacy-preserving identity solutions that maintain user anonymity while ensuring safety.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-meta">
+                    <div class="job-title">Senior Product Manager</div>
+                    <div class="job-date">2022 — 2025</div>
+                </div>
+                <div class="job-company">TechShield Global</div>
+                <ul class="job-bullets">
+                    <li>Defined the product vision for enterprise-grade MFA and Identity-as-a-Service (IDaaS) platforms.</li>
+                    <li>Reduced account takeover (ATO) incidents by 42% for Tier-1 financial clients.</li>
+                    <li>Managed a portfolio of security assets generating $12M in ARR.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-meta">
+                    <div class="job-title">Systems Analyst</div>
+                    <div class="job-date">2019 — 2022</div>
+                </div>
+                <div class="job-company">Veriflow Systems</div>
+                <ul class="job-bullets">
+                    <li>Developed automated risk-scoring algorithms to detect sybil attacks and bot clusters.</li>
+                    <li>Performed deep-dive technical audits on legacy identity verification pipelines.</li>
+                </ul>
+            </div>
+
+            <div class="section-header">Education</div>
+            <div class="job">
+                <div class="job-meta">
+                    <div class="job-title">B.S. Computer Science</div>
+                    <div class="job-date">Graduated 2019</div>
+                </div>
+                <div style="color: var(--text-dim)">Stanford University | Focus in Systems Security</div>
+            </div>
+        </main>
+    </div>
+
+    <footer style="text-align: center; color: #444; margin-top: 40px; font-size: 0.8rem;">
+        References available upon request. Built with Cyber-Premium Framework.
+    </footer>
+
+</body>
+</html>

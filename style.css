@@ -1,0 +1,139 @@
+:root {
+    --bg-dark: #0a0a0c;
+    --card-bg: rgba(25, 25, 30, 0.6);
+    --text-bright: #ffffff;
+    --text-dim: #94949e;
+    --accent-red: #ff3344;
+    --accent-teal: #00f5d4;
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-bright);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.container { padding: 80px 10%; }
+
+/* Navigation */
+nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 10%; position: fixed; width: 100%; top: 0;
+    backdrop-filter: blur(15px); border-bottom: 1px solid var(--glass-border); z-index: 1000;
+}
+
+.nav-links a { color: var(--text-dim); text-decoration: none; margin-left: 25px; transition: 0.3s; font-size: 0.9rem; }
+.nav-links a:hover { color: var(--accent-teal); }
+
+.cta-nav {
+    background: var(--accent-red); color: white !important;
+    padding: 10px 24px; border-radius: 4px; font-weight: bold;
+}
+
+/* Hero Section */
+.hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 10% 60px; }
+
+.hero-container {
+    display: flex; align-items: center; justify-content: space-between; gap: 50px; width: 100%;
+}
+
+.hero-content { flex: 1.2; }
+.hero-image { flex: 0.8; display: flex; justify-content: center; }
+
+h1 { font-size: 4.5rem; margin: 20px 0; line-height: 1.1; }
+
+.gradient-text { 
+    background: linear-gradient(90deg, var(--accent-red), var(--accent-teal));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Square Social Links */
+.social-links { display: flex; gap: 15px; margin-top: 30px; }
+
+.social-square {
+    display: flex; align-items: center; justify-content: center;
+    width: 160px; height: 52px;
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-bright);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.social-square:hover {
+    border-color: var(--accent-teal);
+    color: var(--accent-teal);
+    transform: translateY(-3px);
+    background: rgba(0, 245, 212, 0.05);
+}
+
+/* Profile Image */
+.image-border {
+    padding: 10px;
+    background: linear-gradient(135deg, var(--accent-red), var(--accent-teal));
+    border-radius: 24px;
+    box-shadow: 0 0 30px rgba(0, 245, 212, 0.15);
+}
+
+.profile-pic {
+    width: 320px; height: 400px; object-fit: cover; border-radius: 16px; display: block;
+}
+
+/* Glass Cards */
+.glass {
+    background: var(--card-bg); backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border); border-radius: 20px; padding: 40px;
+}
+
+.featured-project { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; margin-top: 30px; }
+.project-image img { width: 100%; border-radius: 12px; border: 1px solid var(--glass-border); }
+
+/* History Timeline */
+.job-card { margin-bottom: 15px; padding: 25px; transition: 0.3s; border-radius: 12px; }
+.job-card:hover { border-color: var(--accent-teal); transform: translateX(10px); }
+.job-header { display: flex; justify-content: space-between; margin-bottom: 5px; }
+.company { color: var(--accent-red); font-weight: bold; }
+
+.section-label { color: var(--text-dim); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 20px; }
+
+footer { text-align: center; padding: 100px 0; border-top: 1px solid var(--glass-border); }
+footer a { color: var(--accent-teal); text-decoration: none; }
+
+/* Responsive */
+@media (max-width: 968px) {
+    .hero-container { flex-direction: column-reverse; text-align: center; }
+    .social-links { justify-content: center; }
+    h1 { font-size: 3rem; }
+    .featured-project { grid-template-columns: 1fr; }
+}
+
+.resume-btn:hover {
+    border-color: var(--accent-red) !important;
+    color: var(--accent-red) !important;
+    background: rgba(255, 51, 68, 0.05) !important;
+}
+
+/* Ensure the nav button matches the red theme */
+.cta-nav {
+    background: var(--accent-red);
+    color: white !important;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cta-nav:hover {
+    box-shadow: 0 0 15px rgba(255, 51, 68, 0.4);
+    transform: translateY(-2px);
+}
